@@ -1,2 +1,8 @@
 # MD-LR-FrontEnd
-Curso Frontend La Rioja 2021
+
+
+Repositorio que contiene los ejercicios propuestos en clase.
+
+## 🎁
+
+⌨️ powered by [Fede Herrera](https://github.com/FedeHerrera10) 😊
