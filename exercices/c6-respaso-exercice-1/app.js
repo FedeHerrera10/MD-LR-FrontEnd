@@ -45,6 +45,7 @@ btn4Puertas.addEventListener('click' , () =>{
 
 selectMarca.addEventListener('change',e =>{
   const autosMarcaPuertaGenaro  =autosPuertaGenaro(e.target.value);
+  limpiarUI(selectModelo);
   cargarAutos(autosMarcaPuertaGenaro);
 })
 
@@ -62,8 +63,8 @@ selectPuertas.addEventListener('change',e =>{
 })
 
 selectModelo.addEventListener('change',e =>{
-  console.log(e.target.value)
-    if(e.target.value == 'Mustang'){
+
+  if(e.target.value == 'Mustang'){
       const autoComprado=autoCompradoFilter();
       console.log(autoComprado)
       const texto = `Felicitaciones Genaro por haber adquirido tu nuevo y flamante ${autoComprado.marca} ${autoComprado.modelo} que disfrutes tus ${autoComprado.puertas} puertas`
