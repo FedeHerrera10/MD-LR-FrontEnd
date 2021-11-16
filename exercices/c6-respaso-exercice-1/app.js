@@ -56,9 +56,9 @@ selectPuertas.addEventListener('change',e =>{
   limpiarUI(list);
   limpiarUI(selectModelo);
   cargarAutos(filtroAutoMarcaPuertas);
-  crearOption(selectModelo,'');
+  crearOption(selectModelo,'Seleccione un modelo','');
   filtroAutoMarcaPuertas.map(auto => {
-    crearOption(selectModelo,auto.modelo);
+    crearOption(selectModelo,auto.modelo,auto.modelo);
   })
 })
 
@@ -83,7 +83,7 @@ selectModelo.addEventListener('change',e =>{
 const autosPuertaGenaro = (value) => {
   limpiarUI(selectPuertas);
   limpiarUI(list)
-  crearOption(selectPuertas,'');
+  crearOption(selectPuertas,'Seleccione la cantidad de puertas','',);
 
   const arr = arrAutosDisponibles.filter(auto => (auto.marca == value));
   let autosMap = arr.map(item=>{
@@ -95,7 +95,7 @@ const autosPuertaGenaro = (value) => {
 
   let autosMarcaPuertaGenaro = [...autosMapArr.values()]; // Conversión a un array
 
-  autosMarcaPuertaGenaro.map(auto => crearOption(selectPuertas,auto.puertas));
+  autosMarcaPuertaGenaro.map(auto => crearOption(selectPuertas,auto.puertas,auto.puertas));
   return arr;
 }
 

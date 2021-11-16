@@ -5,9 +5,9 @@ export const crearLista = (marca,modelo,puertas)=> {
   return li;
 }
 
-export const crearOption = (select,text) => {
+export const crearOption = (select,text,value) => {
   const option = document.createElement('option');
-  option.value=text;
+  option.value=value;
   option.textContent=text;
   select.appendChild(option);
 }
